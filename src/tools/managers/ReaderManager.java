@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tools;
+package tools.managers;
 
 import entity.Reader;
 import java.util.Scanner;
+import tools.ReaderSaver;
 
 /**
  *

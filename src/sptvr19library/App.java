@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sptvr19library;
 
 
@@ -15,9 +10,9 @@ import tools.BookFactory;
 import tools.BookSaver;
 import tools.History;
 import tools.HistorySaver;
-import tools.ReaderManager;
+import tools.managers.ReaderManager;
 import tools.ReaderSaver;
-import tools.BookManager;
+import tools.managers.BookManager;
 /**
  *
  * @author sillamae kutsekool
@@ -37,7 +32,7 @@ class App {
         readers = rsaver.loadFile();
         
         HistorySaver hsaver = new HistorySaver();
-        //histories = hsaver.loadFile();
+        histories = hsaver.loadFile();
     }
     
     public void run(){
@@ -67,7 +62,7 @@ class App {
                     
                     BookManager man = new BookManager();
                     Book book = man.createBook();
-
+                        
                     man.addBookToArra(book, books);
                     BookSaver saver = new BookSaver();
                     saver.saveBook(books);
